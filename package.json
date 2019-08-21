@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "start": "export NODE_ENV=development && webpack -w & nodemon --inspect .",
+    "serve": "export NODE_ENV=production && webpack -w & node --inspect .",
+    "test-debug": "mocha --require @babel/register --inspect test/*.js --exit",
+    "test": "export NODE_ENV=test && mocha --require @babel/register test/*.js --exit",
+    "debug": "webpack -w & && nodemon --inspect .",
+    "deploy": "export NODE_ENV=deploy && webpack -p && export NODE_ENV=deployment && gcloud functions deploy sabek-institute-payments --runtime nodejs10 --trigger-http --source . --entry-point default"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "source-map-support": "^0.5.13",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "babel-node": "^0.0.1-security",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}
