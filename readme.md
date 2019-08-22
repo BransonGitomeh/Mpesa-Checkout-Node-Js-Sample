@@ -40,7 +40,7 @@ $ yarn test # to run the tests to setup safaricom daraja stuff
 $ yarn deploy # to deploy compiled code to gcp to make the endpoints available for daraja
 ```
 
-tests are present for the following 
+Tests are present for the following 
 
 ```
   Setup
