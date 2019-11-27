@@ -1,4 +1,4 @@
-const { default: router } = require("./index");
+const { default: router } = require("../index");
 var express = require("express");
 var app = express();
 

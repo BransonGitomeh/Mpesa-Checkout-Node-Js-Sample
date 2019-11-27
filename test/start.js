@@ -141,7 +141,7 @@ describe("Setup", () => {
         TransactionDesc: "TESTING"
       };
 
-      // console.log(body);
+      console.log(body);
 
       try {
         const {
