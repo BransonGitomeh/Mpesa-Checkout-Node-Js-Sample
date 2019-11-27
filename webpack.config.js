@@ -13,7 +13,7 @@ fs.readdirSync("node_modules")
   });
 
 module.exports = {
-  entry: NODE_ENV !== "development" ? "./src/index.js" : "./src/server.js",
+  entry: "./src/server.js",
   target: "node",
   mode: "development",
   devtool: "source-map",
