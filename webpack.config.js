@@ -17,11 +17,11 @@ module.exports = {
   target: "node",
   mode: "development",
   devtool: "source-map",
-  output: {
-    path: path.resolve(__dirname, "."),
-    filename: "index.js",
-    libraryTarget: "this"
-  },
+  // output: {
+  //   path: path.resolve(__dirname, "."),
+  //   filename: "index.js",
+  //   libraryTarget: "this"
+  // },
   externals: nodeModules,
   plugins: [
     new webpack.BannerPlugin({

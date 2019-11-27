@@ -1,17 +1,9 @@
-const { default: router } = require("../index");
-var express = require("express");
-var app = express();
+const { default: router } = require("./index");
 
-const { NODE_ENV, PORT = 5000 } = process.env;
+const express = require("express");
+const path = require("path");
+const PORT = process.env.PORT || 5000;
 
-app.use("/", router);
-
-if (NODE_ENV !== "test") {
-  const server = app.listen(PORT, () => {
-    let host = server.address().address;
-    let port = server.address().port;
-    console.log(`server listening on port ${port}`);
-  });
-}
-
-export default app;
+express()
+  .use("/", router)
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
